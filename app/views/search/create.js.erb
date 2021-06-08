@@ -1,0 +1,11 @@
+<% if @err == nil %>
+  window.searchErrors.classList.add('d-none');
+
+  document.getElementById('search-results').innerHTML = "<%= j render partial: 'search/result', collection: @results[:hits,], as: :result %>"
+
+<% else %>
+  window.searchErrors.innerHTML = "<%= @err.to_s.html_safe %>";
+  window.searchErrors.classList.remove('d-none')
+
+  document.getElementById('search-results').innerHTML = '';
+<% end %>

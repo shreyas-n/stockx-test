@@ -1,0 +1,18 @@
+<div class="card card-body border-0 shadow my-2">
+  <div class="row">
+    <div class="col-2">
+      <img src="<%= result[:media][:imageUrl] %>" class="img-fluid">
+    </div>
+    <div class="col-10">
+      <p class="fs-16 font-weight-bold mb-2">
+        <%= result[:name] %>
+      </p>
+      <p class="fs-16 mb-1">
+        <%= result[:release_date] %>
+      </p>
+      <p class="fs-16 mb-0">
+        $<%= result[:searchable_traits][:"Retail Price"] %>
+      </p>
+    </div>
+  </div>
+</div>
